@@ -23,4 +23,5 @@ router.delete("/:id", deleteWorkout)
 
 //UPDATE pojedyńcze ćwiczenie
 router.patch("/:id", updateWorkout)
+
 module.exports = router
