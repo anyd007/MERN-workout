@@ -12,7 +12,7 @@ const WorkoutForm = () =>{
     const handleSubmit = async (e)=>{
         e.preventDefault()
         const workout = ({title, load, reps})
-        const response = await fetch("/api/workouts", {
+        const response = await fetch("http://localhost:4000/api/workouts/", {
             method: "POST",
             body: JSON.stringify(workout),
             headers:{"Content-type":"application/json"}
@@ -28,7 +28,6 @@ const WorkoutForm = () =>{
             setRepas('')
             setError(null)
             setEmptyFields([])
-            console.log('dodano cwiczenie', json);
             dispatch({type: 'CREATE_WORKOUT', payload:json})
         }
     }

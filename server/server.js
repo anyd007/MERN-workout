@@ -4,6 +4,7 @@ const mongoose = require("mongoose")
 const cors = require("cors")
 const path = require("path")
 const workoutRoutes = require("./routes/workouts.js")
+const userRoutes = require("./routes/user.js")
 const app = express()
 
 //middleware
@@ -16,6 +17,7 @@ app.use((req, res, next)=>{
 
 //routs
 app.use("/api/workouts", workoutRoutes)
+app.use("/api/user", userRoutes)
 app.use(express.static(path.join(__dirname, "..", "client", "build")));
 
 //połączenie do db
