@@ -7,6 +7,12 @@ const Navbar = () =>{
                 <Link to="/">
                     <h1>Zacznij Ćwiczyć</h1>
                 </Link>
+                <nav>
+                    <div>
+                        <Link to="/login">Logowanie</Link>
+                        <Link to="/signup">Rejestracja</Link>
+                    </div>
+                </nav>
             </div>
         </header>
     )
