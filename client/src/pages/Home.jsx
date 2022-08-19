@@ -10,7 +10,7 @@ const Home = () =>{
     
     useEffect(()=>{
         const feachWorkout = async ()=>{
-            const response = await fetch('/api/workouts/', {
+            const response = await fetch('/api/workouts', {
                 headers: {
                     'Authorization': `Bearer ${user.token}`
                 }
