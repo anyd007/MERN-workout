@@ -6,8 +6,13 @@ const {
     getWorkout,
     getWorkouts
 } = require("../controllers/workoutController.js")
+const requierAuth = require("../middleware/requierAuth")
 
 const router = express.Router()
+
+//przed wykonaniem wszystkich czynnoścy (GET, POST, DELETE), jest sprawdzana autoryraznja przez 
+//fukcję middleware
+router.use(requierAuth)
 
 //GET(pobiernanie) wszystkich ćwiczeń
 router.get("/", getWorkouts)
